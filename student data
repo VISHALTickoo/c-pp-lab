@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+struct student
+{
+    char name[100];
+    int rolln;
+    int dob;
+    int marks;
+    char branch[100];
+};
+
+int main(){
+    int n;
+    cout<<"enter the number of students : ";
+    cin>> n;
+    student s[n];
+    for(int i=0; i<n; i++){
+        cout<<"ENTER THE NAME OF STUDENT : " << i+1<< endl;
+        cin>>s[i].name;
+        cout<<"ENTER THE ROLL NUMBER : ";
+        cin>>s[i].rolln;
+        cout<<"ENTER THE DATE OF BIRTH : ";
+        cin>>s[i].dob;
+        cout<<"ENTER THE MARKS : ";
+        cin>>s[i].marks;
+        cout<<"ENTER THE BRANCH : ";
+        cin>>s[i].branch;
+    }
+    cout<<"       DETAILS OF THE STUDENT :      "<< endl;
+      for(int i=0; i<n; i++){
+        cout<<"   STUDENT : "<< i+1<< endl;
+        cout<<"NAME : "<< s[i].name<< endl;
+        cout<<"ROLL NUMBER : "<< s[i].rolln<< endl;
+        cout<<"DATE OF BIRTH : "<< s[i].dob<< endl;
+        cout<<"MARKS : "<< s[i].marks<< endl;
+        cout<<"BRANCH : "<< s[i].branch<< endl;
+      }
+return 0;
+}
